@@ -9,6 +9,7 @@ body {
   line-height: 1.5;
   letter-spacing: 2px;
   font-size: 1.1rem;
+  background: #333;
 }
 
 a {
@@ -17,6 +18,24 @@ a {
 
 ul {
   list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 1rem;
+}
+
+/* Utility classes */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden;
+  text-align: center;
 }
 
 /* Navbar */
@@ -76,4 +95,64 @@ ul {
   top: 0;
   left: 0;
   z-index: -1;
+}
+
+/* Sections */
+#section-a {
+  color: #fff;
+  padding: 1rem;
+}
+
+#section-b {
+  background: #fff;
+  padding: 1rem;
+}
+
+#section-b .items {
+  display: flex;
+}
+
+#section-b .items .item {
+  margin: 1rem;
+}
+
+#section-c {
+  color: #fff;
+  padding: 1rem;
+}
+
+#main-footer {
+  background: #fff;
+  padding: 1rem;
+}
+
+/* Slide in */
+.slide-in {
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.align-left.slide-in {
+  transform: translateX(-100%) scale(0.95);
+}
+
+.align-right.slide-in {
+  transform: translateX(100%) scale(0.95);
+}
+
+.slide-in.active {
+  opacity: 1;
+  transform: translateX(0%) scale(1);
+}
+
+/* Media queries for tablet and below */
+@media screen and (max-width: 700px) {
+  #main-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #section-b .items {
+    flex-direction: column;
+  }
 }
